@@ -24,8 +24,9 @@ namespace project
         {
             if(con.State == ConnectionState.Closed)
                 con.Open();
-            string a = Properties.Settings.Default.ten;           
-            string sql = "Select mon,malop,sotin,sv,svmax From dki Where ten IS NULL";
+            string nganh = Properties.Settings.Default.tkhoan.Substring(4, 2);
+            string a = Properties.Settings.Default.tkhoan;          
+            string sql = "Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki,"+nganh+" Where dki.ten IS NULL and dki.mon = "+nganh+".mon";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
@@ -33,7 +34,7 @@ namespace project
             da.Fill(tb);
             cmd.Dispose();
             dvg1.DataSource = tb;        
-            string SQL = "Select malop,mon From dki Where ten = N'"+a+"'";
+            string SQL = "Select malop,mon,svmax From dki Where ten = N'"+a+"'";
             SqlCommand Cmd = new SqlCommand(SQL, con);
             SqlDataAdapter Da = new SqlDataAdapter();
             Da.SelectCommand = Cmd;
@@ -43,7 +44,7 @@ namespace project
             {
                 for(int j = 0; j < Tb.Rows.Count; j++)
                 {
-                    if (tb.Rows[i][1].ToString()==Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString()==Tb.Rows[j][1].ToString() || int.Parse(tb.Rows[i][3].ToString())== 50)                
+                    if (tb.Rows[i][1].ToString() == Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString() == Tb.Rows[j][1].ToString() || int.Parse(tb.Rows[i][3].ToString()) == 50 || tb.Rows[i][4].ToString() == Tb.Rows[j][2].ToString())                
                     {
                         dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;                           
                     }                           
@@ -65,14 +66,14 @@ namespace project
             {
                 if (con.State == ConnectionState.Closed)
                     con.Open();
-                string tensv = Properties.Settings.Default.ten;
+                string tksv = Properties.Settings.Default.tkhoan;
                 string mon_p = dvg1.Rows[a].Cells[0].Value.ToString();
                 string ma_p = dvg1.Rows[a].Cells[1].Value.ToString();
                 string tin_p = dvg1.Rows[a].Cells[2].Value.ToString();
                 string syso_p = (int.Parse(dvg1.Rows[a].Cells[3].Value.ToString()) + 1).ToString();
                 string syso_p1 = dvg1.Rows[a].Cells[3].Value.ToString();
                 string max_p = dvg1.Rows[a].Cells[4].Value.ToString();
-                string sql = "Insert dki Values('" + ma_p + "','" + mon_p + "','" + syso_p1 + "','" + max_p + "',N'" + tensv + "','" + tin_p + "','')";
+                string sql = "Insert dki Values('" + ma_p + "',N'" + mon_p + "','" + syso_p1 + "',N'" + max_p + "',N'" + tksv + "','" + tin_p + "','')";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();

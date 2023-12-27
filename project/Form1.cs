@@ -53,6 +53,7 @@ namespace project
                 if(tb.Rows.Count > 0)
                 {
                     Properties.Settings.Default.ten = tb.Rows[0][2].ToString().Trim();
+                    Properties.Settings.Default.tkhoan = tb.Rows[0][0].ToString().Trim();
                     Properties.Settings.Default.Save();
 
                     Form2 f = new Form2();

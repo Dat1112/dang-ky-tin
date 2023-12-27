@@ -40,18 +40,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnhuy = new System.Windows.Forms.Button();
+            this.btntatca = new System.Windows.Forms.Button();
+            this.btntimkiem = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txttim = new System.Windows.Forms.TextBox();
             this.dvg1 = new System.Windows.Forms.DataGridView();
             this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sotin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.svmax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txttim = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btntimkiem = new System.Windows.Forms.Button();
-            this.btntatca = new System.Windows.Forms.Button();
-            this.btnhuy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -206,6 +206,62 @@
             this.panel4.Size = new System.Drawing.Size(816, 429);
             this.panel4.TabIndex = 3;
             // 
+            // btnhuy
+            // 
+            this.btnhuy.Location = new System.Drawing.Point(368, 369);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(92, 23);
+            this.btnhuy.TabIndex = 8;
+            this.btnhuy.Text = "Hủy đăng ký";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
+            // 
+            // btntatca
+            // 
+            this.btntatca.Location = new System.Drawing.Point(655, 112);
+            this.btntatca.Name = "btntatca";
+            this.btntatca.Size = new System.Drawing.Size(75, 23);
+            this.btntatca.TabIndex = 7;
+            this.btntatca.Text = "Tất cả";
+            this.btntatca.UseVisualStyleBackColor = true;
+            this.btntatca.Click += new System.EventHandler(this.btntatca_Click);
+            // 
+            // btntimkiem
+            // 
+            this.btntimkiem.Location = new System.Drawing.Point(655, 83);
+            this.btntimkiem.Name = "btntimkiem";
+            this.btntimkiem.Size = new System.Drawing.Size(75, 23);
+            this.btntimkiem.TabIndex = 6;
+            this.btntimkiem.Text = "Tìm kiếm";
+            this.btntimkiem.UseVisualStyleBackColor = true;
+            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(259, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(306, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "LỚP HỌC PHẦN ĐÃ ĐĂNG KÝ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(155, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Tìm kiếm";
+            // 
+            // txttim
+            // 
+            this.txttim.Location = new System.Drawing.Point(239, 86);
+            this.txttim.Name = "txttim";
+            this.txttim.Size = new System.Drawing.Size(379, 20);
+            this.txttim.TabIndex = 3;
+            // 
             // dvg1
             // 
             this.dvg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -252,65 +308,9 @@
             // svmax
             // 
             this.svmax.DataPropertyName = "svmax";
-            this.svmax.HeaderText = "Sinh viên tối đa";
+            this.svmax.HeaderText = "Lịch học";
             this.svmax.Name = "svmax";
             this.svmax.ReadOnly = true;
-            // 
-            // txttim
-            // 
-            this.txttim.Location = new System.Drawing.Point(239, 86);
-            this.txttim.Name = "txttim";
-            this.txttim.Size = new System.Drawing.Size(379, 20);
-            this.txttim.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(155, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Tìm kiếm";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(259, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(306, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "LỚP HỌC PHẦN ĐÃ ĐĂNG KÝ";
-            // 
-            // btntimkiem
-            // 
-            this.btntimkiem.Location = new System.Drawing.Point(655, 83);
-            this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(75, 23);
-            this.btntimkiem.TabIndex = 6;
-            this.btntimkiem.Text = "Tìm kiếm";
-            this.btntimkiem.UseVisualStyleBackColor = true;
-            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
-            // 
-            // btntatca
-            // 
-            this.btntatca.Location = new System.Drawing.Point(655, 112);
-            this.btntatca.Name = "btntatca";
-            this.btntatca.Size = new System.Drawing.Size(75, 23);
-            this.btntatca.TabIndex = 7;
-            this.btntatca.Text = "Tất cả";
-            this.btntatca.UseVisualStyleBackColor = true;
-            this.btntatca.Click += new System.EventHandler(this.btntatca_Click);
-            // 
-            // btnhuy
-            // 
-            this.btnhuy.Location = new System.Drawing.Point(368, 369);
-            this.btnhuy.Name = "btnhuy";
-            this.btnhuy.Size = new System.Drawing.Size(92, 23);
-            this.btnhuy.TabIndex = 8;
-            this.btnhuy.Text = "Hủy đăng ký";
-            this.btnhuy.UseVisualStyleBackColor = true;
-            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // Form2
             // 
@@ -351,16 +351,16 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dvg1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn malop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sotin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn svmax;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txttim;
         private System.Windows.Forms.Button btnhuy;
         private System.Windows.Forms.Button btntatca;
         private System.Windows.Forms.Button btntimkiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn svmax;
     }
 }

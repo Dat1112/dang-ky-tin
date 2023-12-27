@@ -91,7 +91,7 @@ namespace project
         {
             if (con.State == ConnectionState.Closed)
                 con.Open();
-            string a = Properties.Settings.Default.ten;
+            string a = Properties.Settings.Default.tkhoan;
             string sql = "Select mon,malop,sotin,sv,svmax From dki Where ten = N'"+a+"'";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter();
@@ -122,12 +122,12 @@ namespace project
         private void btnhuy_Click(object sender, EventArgs e)
         {
             int i = dvg1.CurrentRow.Index;
-            string tensv = Properties.Settings.Default.ten; 
+            string tksv = Properties.Settings.Default.tkhoan; 
             string ma_p = dvg1.Rows[i].Cells[1].Value.ToString();
             string syso_p = (int.Parse(dvg1.Rows[i].Cells[3].Value.ToString()) - 1).ToString();
             if (con.State == ConnectionState.Closed)
                 con.Open();
-            string sql = "Delete dki Where malop = '"+ma_p+"' and ten = N'"+tensv+"'";
+            string sql = "Delete dki Where malop = '"+ma_p+"' and ten = N'"+tksv+"'";
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();
             cmd.Dispose();

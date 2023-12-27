@@ -30,17 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dvg1 = new System.Windows.Forms.DataGridView();
-            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.svmax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btndangky = new System.Windows.Forms.Button();
             this.txttim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btntimkiem = new System.Windows.Forms.Button();
             this.btntrangthai = new System.Windows.Forms.Button();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.svmax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvg1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,41 +66,6 @@
             this.dvg1.ReadOnly = true;
             this.dvg1.Size = new System.Drawing.Size(542, 150);
             this.dvg1.TabIndex = 1;
-            // 
-            // ten
-            // 
-            this.ten.DataPropertyName = "mon";
-            this.ten.HeaderText = "Tên học phần";
-            this.ten.Name = "ten";
-            this.ten.ReadOnly = true;
-            // 
-            // malop
-            // 
-            this.malop.DataPropertyName = "malop";
-            this.malop.HeaderText = "Mã lớp";
-            this.malop.Name = "malop";
-            this.malop.ReadOnly = true;
-            // 
-            // sotin
-            // 
-            this.sotin.DataPropertyName = "sotin";
-            this.sotin.HeaderText = "Số tín";
-            this.sotin.Name = "sotin";
-            this.sotin.ReadOnly = true;
-            // 
-            // sv
-            // 
-            this.sv.DataPropertyName = "sv";
-            this.sv.HeaderText = "Sỹ số";
-            this.sv.Name = "sv";
-            this.sv.ReadOnly = true;
-            // 
-            // svmax
-            // 
-            this.svmax.DataPropertyName = "svmax";
-            this.svmax.HeaderText = "Sinh viên tối đa";
-            this.svmax.Name = "svmax";
-            this.svmax.ReadOnly = true;
             // 
             // label2
             // 
@@ -158,6 +123,46 @@
             this.btntrangthai.UseVisualStyleBackColor = true;
             this.btntrangthai.Click += new System.EventHandler(this.btntrangthai_Click);
             // 
+            // ten
+            // 
+            this.ten.DataPropertyName = "mon";
+            this.ten.HeaderText = "Tên học phần";
+            this.ten.Name = "ten";
+            this.ten.ReadOnly = true;
+            this.ten.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // malop
+            // 
+            this.malop.DataPropertyName = "malop";
+            this.malop.HeaderText = "Mã lớp";
+            this.malop.Name = "malop";
+            this.malop.ReadOnly = true;
+            this.malop.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // sotin
+            // 
+            this.sotin.DataPropertyName = "sotin";
+            this.sotin.HeaderText = "Số tín";
+            this.sotin.Name = "sotin";
+            this.sotin.ReadOnly = true;
+            this.sotin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // sv
+            // 
+            this.sv.DataPropertyName = "sv";
+            this.sv.HeaderText = "Sỹ số";
+            this.sv.Name = "sv";
+            this.sv.ReadOnly = true;
+            this.sv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // svmax
+            // 
+            this.svmax.DataPropertyName = "svmax";
+            this.svmax.HeaderText = "Lịch học";
+            this.svmax.Name = "svmax";
+            this.svmax.ReadOnly = true;
+            this.svmax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,11 +195,11 @@
         private System.Windows.Forms.TextBox txttim;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btntimkiem;
+        private System.Windows.Forms.Button btntrangthai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten;
         private System.Windows.Forms.DataGridViewTextBoxColumn malop;
         private System.Windows.Forms.DataGridViewTextBoxColumn sotin;
         private System.Windows.Forms.DataGridViewTextBoxColumn sv;
         private System.Windows.Forms.DataGridViewTextBoxColumn svmax;
-        private System.Windows.Forms.Button btntrangthai;
     }
 }
