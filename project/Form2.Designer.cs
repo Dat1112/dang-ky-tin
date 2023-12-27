@@ -52,6 +52,10 @@
             this.sotin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.svmax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btntkb = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,6 +78,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btntkb);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btndki);
@@ -90,9 +98,9 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(-5, 173);
+            this.button3.Location = new System.Drawing.Point(-5, 85);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 49);
+            this.button3.Size = new System.Drawing.Size(120, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "TRỢ GIÚP";
             this.button3.UseVisualStyleBackColor = false;
@@ -104,9 +112,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-5, 114);
+            this.button2.Location = new System.Drawing.Point(-5, 59);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 53);
+            this.button2.Size = new System.Drawing.Size(120, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "LỘ TRÌNH HỌC";
             this.button2.UseVisualStyleBackColor = false;
@@ -118,9 +126,9 @@
             this.btndki.FlatAppearance.BorderSize = 0;
             this.btndki.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndki.ForeColor = System.Drawing.Color.White;
-            this.btndki.Location = new System.Drawing.Point(-5, 55);
+            this.btndki.Location = new System.Drawing.Point(-5, 26);
             this.btndki.Name = "btndki";
-            this.btndki.Size = new System.Drawing.Size(120, 53);
+            this.btndki.Size = new System.Drawing.Size(120, 36);
             this.btndki.TabIndex = 4;
             this.btndki.Text = "ĐĂNG KÝ TÍN";
             this.btndki.UseVisualStyleBackColor = false;
@@ -134,9 +142,9 @@
             this.btncanhan.ForeColor = System.Drawing.Color.White;
             this.btncanhan.Location = new System.Drawing.Point(0, 0);
             this.btncanhan.Name = "btncanhan";
-            this.btncanhan.Size = new System.Drawing.Size(120, 49);
+            this.btncanhan.Size = new System.Drawing.Size(120, 30);
             this.btncanhan.TabIndex = 3;
-            this.btncanhan.Text = "CÁ NHÂN";
+            this.btncanhan.Text = "ĐÃ ĐĂNG KÝ";
             this.btncanhan.UseVisualStyleBackColor = false;
             this.btncanhan.Click += new System.EventHandler(this.btncanhan_Click_1);
             // 
@@ -312,6 +320,62 @@
             this.svmax.Name = "svmax";
             this.svmax.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(-5, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "GÓP Ý";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btntkb
+            // 
+            this.btntkb.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btntkb.FlatAppearance.BorderSize = 0;
+            this.btntkb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntkb.ForeColor = System.Drawing.Color.White;
+            this.btntkb.Location = new System.Drawing.Point(-5, 134);
+            this.btntkb.Name = "btntkb";
+            this.btntkb.Size = new System.Drawing.Size(120, 23);
+            this.btntkb.TabIndex = 10;
+            this.btntkb.Text = "THỜI KHÓA BIỂU";
+            this.btntkb.UseVisualStyleBackColor = false;
+            this.btntkb.Click += new System.EventHandler(this.btntkb_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(-5, 151);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 27);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "CÁ NHÂN";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(-5, 184);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(120, 27);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "CẢNH CÁO";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,5 +426,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sotin;
         private System.Windows.Forms.DataGridViewTextBoxColumn sv;
         private System.Windows.Forms.DataGridViewTextBoxColumn svmax;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btntkb;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -157,5 +157,29 @@ namespace project
             dvg1.DataSource = tb;
             dvg1.Refresh();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new gopy());
+            label1.Text = button1.Text;
+        }
+
+        private void btntkb_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new tkb());
+            label1.Text = btntkb.Text;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form6());
+            label1.Text = button4.Text;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new canhcao());
+            label1.Text = button5.Text;
+        }
     }
 }

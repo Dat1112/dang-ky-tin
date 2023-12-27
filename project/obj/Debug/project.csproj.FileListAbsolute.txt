@@ -12,3 +12,7 @@ D:\Desktop\C#\project\project\obj\Debug\project.pdb
 D:\Desktop\C#\project\project\obj\Debug\project.Form3.resources
 D:\Desktop\C#\project\project\obj\Debug\project.Form5.resources
 D:\Desktop\C#\project\project\obj\Debug\project.Form4.resources
+D:\Desktop\C#\project\project\obj\Debug\project.gopy.resources
+D:\Desktop\C#\project\project\obj\Debug\project.tkb.resources
+D:\Desktop\C#\project\project\obj\Debug\project.Form6.resources
+D:\Desktop\C#\project\project\obj\Debug\project.canhcao.resources

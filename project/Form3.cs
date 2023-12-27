@@ -34,21 +34,33 @@ namespace project
             da.Fill(tb);
             cmd.Dispose();
             dvg1.DataSource = tb;        
-            string SQL = "Select malop,mon,svmax From dki Where ten = N'"+a+"'";
+            string SQL = "Select dki.malop,dki.mon,dki.svmax From dki Where dki.ten = N'"+a+"' ";
             SqlCommand Cmd = new SqlCommand(SQL, con);
             SqlDataAdapter Da = new SqlDataAdapter();
             Da.SelectCommand = Cmd;
             DataTable Tb = new DataTable();
             Da.Fill(Tb);            
+            DataTable TB = new DataTable();
+            TB = thuvien.bang("Select ketqua.mon,ketqua.diem from ketqua,dki where ketqua.ma='" + a + "' and dki.mon=ketqua.mon");
             for(int i=0; i < tb.Rows.Count; i++)
             {
-                for(int j = 0; j < Tb.Rows.Count; j++)
+                if(int.Parse(tb.Rows[i][3].ToString()) == 50)
+                    dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
+
+                for (int j = 0; j < Tb.Rows.Count; j++)
                 {
-                    if (tb.Rows[i][1].ToString() == Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString() == Tb.Rows[j][1].ToString() || int.Parse(tb.Rows[i][3].ToString()) == 50 || tb.Rows[i][4].ToString() == Tb.Rows[j][2].ToString())                
+                    if (tb.Rows[i][1].ToString() == Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString() == Tb.Rows[j][1].ToString() || tb.Rows[i][4].ToString() == Tb.Rows[j][2].ToString())                
                     {
                         dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;                           
-                    }                           
+                    }                    
                 }
+
+                for (int k = 0; k < TB.Rows.Count; k++)
+                {
+                    if (tb.Rows[i][0].ToString() == TB.Rows[k][0].ToString() && float.Parse(TB.Rows[k][1].ToString()) > 3)
+                        dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
+                }
+
             }
             Cmd.Dispose();
             dvg1.Refresh();
@@ -109,7 +121,7 @@ namespace project
 
         private void btntimkiem_Click(object sender, EventArgs e)
         {
-            string a = Properties.Settings.Default.ten;
+            string a = Properties.Settings.Default.tkhoan;
             if(con.State == ConnectionState.Closed)           
                 con.Open();           
             string tim = txttim.Text.Trim();
@@ -121,20 +133,29 @@ namespace project
             da.Fill(tb);
             cmd.Dispose();        
             dvg1.DataSource = tb;
-            string SQL = "Select malop,mon From dki Where ten = N'" + a + "'";
+            string SQL = "Select malop,mon,svmax From dki Where ten = N'" + a + "'";
             SqlCommand Cmd = new SqlCommand(SQL, con);
             SqlDataAdapter Da = new SqlDataAdapter();
             Da.SelectCommand = Cmd;
             DataTable Tb = new DataTable();
             Da.Fill(Tb);
+            DataTable TB = new DataTable();
+            TB = thuvien.bang("Select ketqua.mon,ketqua.diem from ketqua,dki where ketqua.ma='" + a + "' and dki.mon=ketqua.mon");
             for (int i = 0; i < tb.Rows.Count; i++)
             {
+                if (int.Parse(tb.Rows[i][3].ToString()) == 50)
+                    dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
                 for (int j = 0; j < Tb.Rows.Count; j++)
                 {
-                    if (tb.Rows[i][1].ToString()==Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString()==Tb.Rows[j][1].ToString())
+                    if (tb.Rows[i][1].ToString()==Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString()==Tb.Rows[j][1].ToString() || tb.Rows[i][4].ToString() == Tb.Rows[j][2].ToString())
                     {
                         dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
                     }
+                }
+                for (int k = 0; k < TB.Rows.Count; k++)
+                {
+                    if (tb.Rows[i][0].ToString() == TB.Rows[k][0].ToString() && float.Parse(TB.Rows[k][1].ToString()) > 3)
+                        dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
                 }
             }
             Cmd.Dispose();
