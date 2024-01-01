@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ad_ctrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_ctrinh.Designer.cs">
+      <DependentUpon>ad_ctrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_menu.Designer.cs">
+      <DependentUpon>ad_menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="canhcao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     <Compile Include="tkb.Designer.cs">
       <DependentUpon>tkb.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ad_ctrinh.resx">
+      <DependentUpon>ad_ctrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_menu.resx">
+      <DependentUpon>ad_menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="canhcao.resx">
       <DependentUpon>canhcao.cs</DependentUpon>
     </EmbeddedResource>

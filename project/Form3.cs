@@ -25,8 +25,10 @@ namespace project
             if(con.State == ConnectionState.Closed)
                 con.Open();
             string nganh = Properties.Settings.Default.tkhoan.Substring(4, 2);
-            string a = Properties.Settings.Default.tkhoan;          
-            string sql = "Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki,"+nganh+" Where dki.ten IS NULL and dki.mon = "+nganh+".mon";
+            string a = Properties.Settings.Default.tkhoan;
+            int khoa = int.Parse(Properties.Settings.Default.tkhoan.Substring(0, 2));
+            string sql = "Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki,"+nganh+" " +
+                "Where dki.ten IS NULL and dki.mon = "+nganh+".mon and "+nganh+".["+khoa+"]="+nganh+".hocky";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;

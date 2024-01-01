@@ -34,6 +34,21 @@ namespace project
             cmd.Dispose();
             con.Close();
         }
+        public static bool Checktrungma(string p_makt, string p_tenbang, string p_tencot)
+        {
+            //B1:ket noi db
+            if (con.State == ConnectionState.Closed)
+                con.Open();
+            //B2:tao doi tuong command de thuc hien kiem tra
+            string sql = "Select count(*)From " + p_tenbang + " where " + p_tencot + "='" + p_makt + "'";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            int kq = (int)cmd.ExecuteScalar();
+            cmd.Dispose();
+            con.Close();
+            if (kq > 0) return true;
+            else return false;
+
+        }
 
     }
 }

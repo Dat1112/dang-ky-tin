@@ -16,3 +16,5 @@ D:\Desktop\C#\project\project\obj\Debug\project.gopy.resources
 D:\Desktop\C#\project\project\obj\Debug\project.tkb.resources
 D:\Desktop\C#\project\project\obj\Debug\project.Form6.resources
 D:\Desktop\C#\project\project\obj\Debug\project.canhcao.resources
+D:\Desktop\C#\project\project\obj\Debug\project.ad_menu.resources
+D:\Desktop\C#\project\project\obj\Debug\project.ad_ctrinh.resources

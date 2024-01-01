@@ -55,10 +55,19 @@ namespace project
                     Properties.Settings.Default.ten = tb.Rows[0][2].ToString().Trim();
                     Properties.Settings.Default.tkhoan = tb.Rows[0][0].ToString().Trim();
                     Properties.Settings.Default.Save();
-
-                    Form2 f = new Form2();
-                    f.Show();
-                    this.Hide();
+                    if (Properties.Settings.Default.tkhoan.Substring(0, 5) == "admin")
+                    {
+                        ad_menu F = new ad_menu();
+                        F.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        Form2 f = new Form2();
+                        f.Show();
+                        this.Hide();
+                    }
+                   
                    
                 }
                 else
