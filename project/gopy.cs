@@ -23,7 +23,7 @@ namespace project
             string a = Properties.Settings.Default.tkhoan;
             string b = txtykien.Text;
             string c = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt" );
-            thuvien.thucthi("Insert gopy values('"+a+"',N'"+b+"','"+c+"')");
+            thuvien.thucthi("Insert into gopy(masv,svgopy,time) values('"+a+"',N'"+b+"','"+c+"')");
             MessageBox.Show("Cảm ơn bạn");
             Load_dvg1();
         }
