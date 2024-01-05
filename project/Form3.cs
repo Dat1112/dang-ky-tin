@@ -27,8 +27,11 @@ namespace project
             string nganh = Properties.Settings.Default.tkhoan.Substring(4, 2);
             string a = Properties.Settings.Default.tkhoan;
             int khoa = int.Parse(Properties.Settings.Default.tkhoan.Substring(0, 2));
-            string sql = "Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki,"+nganh+" " +
-                "Where dki.ten IS NULL and dki.mon = "+nganh+".mon and "+nganh+".["+khoa+"]="+nganh+".hocky";
+            string sql = "Select dki.mon, dki.malop, dki.sotin, dki.sv, dki.svmax From dki " +
+                "JOIN "+nganh+ " ON  dki.mon = "+nganh+".mon " +
+                "LEFT JOIN ketqua ON dki.mon = ketqua.mon " +
+                "Where dki.ten IS NULL " +
+                " and (" + nganh+".["+khoa+"]="+nganh+".hocky or (ketqua.mon IS NOT NULL and ketqua.ma = '"+a+"'and ketqua.diem<3))";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
@@ -103,7 +106,7 @@ namespace project
 
         private void Form3_Load(object sender, EventArgs e)
         {
-       //     Load_dvg1();
+           // Load_dvg1();
          //   DialogResult dl = MessageBox.Show("Đăng ký trước ngày 1/1/2024","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
            // if(dl == DialogResult.OK)
           //  {
@@ -123,11 +126,17 @@ namespace project
 
         private void btntimkiem_Click(object sender, EventArgs e)
         {
+            string nganh = Properties.Settings.Default.tkhoan.Substring(4, 2);
             string a = Properties.Settings.Default.tkhoan;
             if(con.State == ConnectionState.Closed)           
                 con.Open();           
-            string tim = txttim.Text.Trim();
-            string sql = "Select mon,malop,sotin,sv,svmax From dki Where ten IS NULL and (mon like '%"+tim+ "%' or malop like '%"+tim+ "%' or sotin like '%"+tim+ "%' or sv like '%"+tim+ "%' or  svmax like '%"+tim+"%')";
+            string tim = textBox1.Text.Trim();
+            int khoa = int.Parse(Properties.Settings.Default.tkhoan.Substring(0, 2));
+            string sql = "Select dki.mon, dki.malop, dki.sotin, dki.sv, dki.svmax From dki " +
+                "JOIN " + nganh + " ON  dki.mon = " + nganh + ".mon " +
+                "LEFT JOIN ketqua ON dki.mon = ketqua.mon " +
+                "Where dki.ten IS NULL and (dki.mon like N'%"+tim+ "%' or dki.malop like N'%"+tim+ "%' or dki.sotin like N'%"+tim+ "%' or dki.sv like N'%"+tim+ "%' or  dki.svmax like N'%"+tim+"%')" +
+                " and (" + nganh + ".[" + khoa + "]=" + nganh + ".hocky or (ketqua.mon IS NOT NULL and ketqua.ma = '" + a + "'and ketqua.diem<3))";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
@@ -151,7 +160,7 @@ namespace project
                 {
                     if (tb.Rows[i][1].ToString()==Tb.Rows[j][0].ToString() || tb.Rows[i][0].ToString()==Tb.Rows[j][1].ToString() || tb.Rows[i][4].ToString() == Tb.Rows[j][2].ToString())
                     {
-                        dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
+                        dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray; 
                     }
                 }
                 for (int k = 0; k < TB.Rows.Count; k++)

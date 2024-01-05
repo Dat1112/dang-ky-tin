@@ -40,7 +40,7 @@ namespace project
             if (con.State == ConnectionState.Closed)
                 con.Open();
             //B2:tao doi tuong command de thuc hien kiem tra
-            string sql = "Select count(*)From " + p_tenbang + " where " + p_tencot + "='" + p_makt + "'";
+            string sql = "Select count(*)From " + p_tenbang + " where " + p_tencot + "=N'" + p_makt + "'";
             SqlCommand cmd = new SqlCommand(sql, con);
             int kq = (int)cmd.ExecuteScalar();
             cmd.Dispose();
@@ -48,6 +48,21 @@ namespace project
             if (kq > 0) return true;
             else return false;
 
+        }
+        public static string tim(string ma,string tim)
+        {
+            string sql = "Select "+tim+" from taikhoan where tendangnhap = '"+ma+"'";
+            if (con.State == ConnectionState.Closed)
+                con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            cmd.Dispose();
+            con.Close();
+            string k = tb.Rows[0][0].ToString();
+            return k;
         }
 
     }

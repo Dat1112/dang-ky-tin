@@ -519,10 +519,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(26, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 31);
+            this.label1.Size = new System.Drawing.Size(305, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "CẬP NHẬT DANH SÁCH LỚP";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -604,6 +604,7 @@
             this.btntkb.TabIndex = 10;
             this.btntkb.Text = "THÔNG BÁO";
             this.btntkb.UseVisualStyleBackColor = false;
+            this.btntkb.Click += new System.EventHandler(this.btntkb_Click);
             // 
             // button1
             // 
@@ -617,6 +618,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "HÒM THƯ GÓP Ý";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 

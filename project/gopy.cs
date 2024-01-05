@@ -22,7 +22,8 @@ namespace project
         {
             string a = Properties.Settings.Default.tkhoan;
             string b = txtykien.Text;
-            thuvien.thucthi("Insert gopy values('"+a+"',N'"+b+"')");
+            string c = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt" );
+            thuvien.thucthi("Insert gopy values('"+a+"',N'"+b+"','"+c+"')");
             MessageBox.Show("Cảm ơn bạn");
             Load_dvg1();
         }
@@ -30,7 +31,7 @@ namespace project
         private void Load_dvg1()
         {
             string a = Properties.Settings.Default.tkhoan;
-            dvg1.DataSource = thuvien.bang("Select svgopy from gopy where masv = '"+a+"'");
+            dvg1.DataSource = thuvien.bang("Select svgopy,time,phanhoi from gopy where masv = '"+a+"'");
             dvg1.Refresh();
         }
         private void btnxoa_Click(object sender, EventArgs e)
@@ -60,7 +61,8 @@ namespace project
             string a = dvg1.Rows[i].Cells[0].Value.ToString();
             string b = Properties.Settings.Default.tkhoan;
             string c = txtykien.Text;
-            thuvien.thucthi("update gopy set svgopy = N'" + c + "' where masv = '" + b + "' and svgopy = N'" + a + "'");
+            string d = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+            thuvien.thucthi("update gopy set svgopy = N'" + c + "',time = '"+d+"' where masv = '" + b + "' and svgopy = N'" + a + "'");
             Load_dvg1();
         }
     }

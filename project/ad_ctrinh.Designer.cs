@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.txttim = new System.Windows.Forms.GroupBox();
+            this.txthocky = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txttin = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.btnhienthi = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbonganh = new System.Windows.Forms.ComboBox();
-            this.txthocky = new System.Windows.Forms.TextBox();
             this.txttim.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvg1)).BeginInit();
@@ -80,6 +80,16 @@
             this.txttim.Text = "Tác vụ";
             this.txttim.Enter += new System.EventHandler(this.txttim_Enter);
             // 
+            // txthocky
+            // 
+            this.txthocky.BackColor = System.Drawing.Color.White;
+            this.txthocky.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txthocky.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthocky.Location = new System.Drawing.Point(80, 100);
+            this.txthocky.Name = "txthocky";
+            this.txthocky.Size = new System.Drawing.Size(114, 15);
+            this.txthocky.TabIndex = 22;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -102,7 +112,7 @@
             // 
             this.txttin.BackColor = System.Drawing.Color.White;
             this.txttin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txttin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttin.Location = new System.Drawing.Point(80, 62);
             this.txttin.Name = "txttin";
             this.txttin.Size = new System.Drawing.Size(114, 15);
@@ -141,7 +151,7 @@
             // 
             this.txtten.BackColor = System.Drawing.Color.White;
             this.txtten.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtten.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtten.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtten.Location = new System.Drawing.Point(80, 21);
             this.txtten.Name = "txtten";
             this.txtten.Size = new System.Drawing.Size(114, 15);
@@ -293,16 +303,6 @@
             this.cbonganh.Name = "cbonganh";
             this.cbonganh.Size = new System.Drawing.Size(146, 25);
             this.cbonganh.TabIndex = 6;
-            // 
-            // txthocky
-            // 
-            this.txthocky.BackColor = System.Drawing.Color.White;
-            this.txthocky.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txthocky.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthocky.Location = new System.Drawing.Point(80, 100);
-            this.txthocky.Name = "txthocky";
-            this.txthocky.Size = new System.Drawing.Size(114, 15);
-            this.txthocky.TabIndex = 22;
             // 
             // ad_ctrinh
             // 

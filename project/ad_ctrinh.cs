@@ -35,7 +35,9 @@ namespace project
 
         private void btnhienthi_Click(object sender, EventArgs e)
         {
-            Load_dvg1(cbonganh.Text.Substring(0,2));
+            if (cbonganh.Text == "")
+                MessageBox.Show("Nhập ngành");
+            else Load_dvg1(cbonganh.Text.Substring(0,2));
         }
 
         private void ad_ctrinh_Load(object sender, EventArgs e)

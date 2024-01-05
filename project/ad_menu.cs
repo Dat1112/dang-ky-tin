@@ -63,15 +63,23 @@ namespace project
 
         private void btncapnhat_Click(object sender, EventArgs e)
         {
-            string nganh = cbonganh.Text.Substring(0, 2);
-            string khoa = cbokhoa.Text;
-            string hk = cbohk.Text;          
-            thuvien.thucthi("update "+nganh+" set ["+khoa+"] = "+hk+"");
-            MessageBox.Show("Cập nhật thành công");
-            DataTable tb = thuvien.bang("Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki," + nganh + " " +
-                "Where dki.ten IS NULL and dki.mon = " + nganh + ".mon and " + nganh + ".[" + khoa + "]=" + nganh + ".hocky");
-            dvg1.DataSource = tb;
-            dvg1.Refresh();
+            if(cbonganh.Text == ""||cbokhoa.Text == ""||cbohk.Text =="")
+            {
+                MessageBox.Show("nhập đủ thông tin");
+            }
+            else
+            {
+                string nganh = cbonganh.Text.Substring(0, 2);
+                string khoa = cbokhoa.Text;
+                string hk = cbohk.Text;
+                thuvien.thucthi("update " + nganh + " set [" + khoa + "] = " + hk + "");
+                MessageBox.Show("Cập nhật thành công");
+                DataTable tb = thuvien.bang("Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki," + nganh + " " +
+                    "Where dki.ten IS NULL and dki.mon = " + nganh + ".mon and " + nganh + ".[" + khoa + "]=" + nganh + ".hocky");
+                dvg1.DataSource = tb;
+                dvg1.Refresh();
+            }
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -164,13 +172,20 @@ namespace project
 
         private void btnhienthi_Click(object sender, EventArgs e)
         {
-            string nganh = cbonganh.Text.Substring(0, 2);
-            string khoa = cbokhoa.Text;
-            string hk = cbohk.Text;
-            DataTable tb = thuvien.bang("Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki," + nganh + " " +
-                "Where dki.ten IS NULL and dki.mon = " + nganh + ".mon and " + nganh + ".hocky = "+hk+"");
-            dvg1.DataSource = tb;
-            dvg1.Refresh();
+           
+            if (cbonganh.Text == "" || cbokhoa.Text == "" || cbohk.Text == "")
+                MessageBox.Show("Nhập đủ thông tin");
+            else
+            {
+                string nganh = cbonganh.Text.Substring(0, 2);
+                string khoa = cbokhoa.Text;
+                string hk = cbohk.Text;
+                DataTable tb = thuvien.bang("Select dki.mon,dki.malop,dki.sotin,dki.sv,dki.svmax From dki," + nganh + " " +
+    "Where dki.ten IS NULL and dki.mon = " + nganh + ".mon and " + nganh + ".hocky = " + hk + "");
+                dvg1.DataSource = tb;
+                dvg1.Refresh();
+            }
+
         }
 
         private void btnctrinh_Click(object sender, EventArgs e)
@@ -192,6 +207,18 @@ namespace project
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ad_gopy());
+            label1.Text = button1.Text;
+        }
+
+        private void btntkb_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ad_thongbao());
+            label1.Text = btntkb.Text;
         }
     }
 }

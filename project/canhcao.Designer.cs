@@ -36,14 +36,16 @@
             this.dvg1 = new System.Windows.Forms.DataGridView();
             this.mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvg1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(307, 25);
+            this.label1.Location = new System.Drawing.Point(253, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 25);
             this.label1.TabIndex = 0;
@@ -51,7 +53,7 @@
             // 
             // btntatca
             // 
-            this.btntatca.Location = new System.Drawing.Point(634, 122);
+            this.btntatca.Location = new System.Drawing.Point(348, 73);
             this.btntatca.Name = "btntatca";
             this.btntatca.Size = new System.Drawing.Size(75, 23);
             this.btntatca.TabIndex = 16;
@@ -61,7 +63,7 @@
             // 
             // btntimkiem
             // 
-            this.btntimkiem.Location = new System.Drawing.Point(634, 93);
+            this.btntimkiem.Location = new System.Drawing.Point(348, 44);
             this.btntimkiem.Name = "btntimkiem";
             this.btntimkiem.Size = new System.Drawing.Size(75, 23);
             this.btntimkiem.TabIndex = 15;
@@ -72,7 +74,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(134, 103);
+            this.label4.Location = new System.Drawing.Point(287, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 14;
@@ -80,9 +82,9 @@
             // 
             // txttim
             // 
-            this.txttim.Location = new System.Drawing.Point(218, 96);
+            this.txttim.Location = new System.Drawing.Point(254, 42);
             this.txttim.Name = "txttim";
-            this.txttim.Size = new System.Drawing.Size(379, 20);
+            this.txttim.Size = new System.Drawing.Size(82, 20);
             this.txttim.TabIndex = 13;
             // 
             // dvg1
@@ -91,7 +93,7 @@
             this.dvg1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mon,
             this.diem});
-            this.dvg1.Location = new System.Drawing.Point(273, 168);
+            this.dvg1.Location = new System.Drawing.Point(6, 30);
             this.dvg1.Name = "dvg1";
             this.dvg1.Size = new System.Drawing.Size(241, 150);
             this.dvg1.TabIndex = 12;
@@ -108,23 +110,34 @@
             this.diem.HeaderText = "Điểm trung bình";
             this.diem.Name = "diem";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dvg1);
+            this.groupBox1.Controls.Add(this.btntatca);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btntimkiem);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txttim);
+            this.groupBox1.Location = new System.Drawing.Point(704, 223);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(287, 186);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // canhcao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btntatca);
-            this.Controls.Add(this.btntimkiem);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txttim);
-            this.Controls.Add(this.dvg1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "canhcao";
             this.Text = "canhcao";
             this.Load += new System.EventHandler(this.canhcao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvg1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -138,5 +151,6 @@
         private System.Windows.Forms.DataGridView dvg1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mon;
         private System.Windows.Forms.DataGridViewTextBoxColumn diem;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

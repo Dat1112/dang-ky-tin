@@ -55,11 +55,23 @@
     <Compile Include="ad_ctrinh.Designer.cs">
       <DependentUpon>ad_ctrinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="ad_gopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_gopy.Designer.cs">
+      <DependentUpon>ad_gopy.cs</DependentUpon>
+    </Compile>
     <Compile Include="ad_menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ad_menu.Designer.cs">
       <DependentUpon>ad_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_thongbao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_thongbao.Designer.cs">
+      <DependentUpon>ad_thongbao.cs</DependentUpon>
     </Compile>
     <Compile Include="canhcao.cs">
       <SubType>Form</SubType>
@@ -122,8 +134,14 @@
     <EmbeddedResource Include="ad_ctrinh.resx">
       <DependentUpon>ad_ctrinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ad_gopy.resx">
+      <DependentUpon>ad_gopy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ad_menu.resx">
       <DependentUpon>ad_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_thongbao.resx">
+      <DependentUpon>ad_thongbao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="canhcao.resx">
       <DependentUpon>canhcao.cs</DependentUpon>

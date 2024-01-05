@@ -41,5 +41,20 @@ namespace project
             dvg1.DataSource = thuvien.bang("Select mon,diem from ketqua where ma = '" + a + "'and (mon like '%"+b+"%'or diem like '%"+b+"%')");
 
         }
+
+        private void dvg1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
