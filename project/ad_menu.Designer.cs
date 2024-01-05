@@ -439,7 +439,6 @@
             // 
             this.cbohk.FormattingEnabled = true;
             this.cbohk.Items.AddRange(new object[] {
-            "Kế tiếp",
             "1",
             "2",
             "3",
@@ -467,7 +466,6 @@
             // 
             this.cbonganh.FormattingEnabled = true;
             this.cbonganh.Items.AddRange(new object[] {
-            "Tất cả",
             "TT-Công nghệ thông tin",
             "VL-Logistic"});
             this.cbonganh.Location = new System.Drawing.Point(60, 18);
@@ -488,7 +486,6 @@
             // 
             this.cbokhoa.FormattingEnabled = true;
             this.cbokhoa.Items.AddRange(new object[] {
-            "Tất cả",
             "73",
             "74"});
             this.cbokhoa.Location = new System.Drawing.Point(300, 18);
@@ -572,12 +569,13 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 245);
+            this.button5.Location = new System.Drawing.Point(-4, 221);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(120, 27);
             this.button5.TabIndex = 10;
             this.button5.Text = "CẢNH CÁO";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -585,7 +583,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(-5, 203);
+            this.button4.Location = new System.Drawing.Point(-5, 118);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 36);
             this.button4.TabIndex = 9;
@@ -598,7 +596,7 @@
             this.btntkb.FlatAppearance.BorderSize = 0;
             this.btntkb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntkb.ForeColor = System.Drawing.Color.White;
-            this.btntkb.Location = new System.Drawing.Point(-5, 174);
+            this.btntkb.Location = new System.Drawing.Point(-5, 94);
             this.btntkb.Name = "btntkb";
             this.btntkb.Size = new System.Drawing.Size(120, 23);
             this.btntkb.TabIndex = 10;
@@ -612,7 +610,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 145);
+            this.button1.Location = new System.Drawing.Point(-5, 71);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 9;
@@ -626,7 +624,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(-8, 104);
+            this.button3.Location = new System.Drawing.Point(-4, 182);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 36);
             this.button3.TabIndex = 4;
@@ -639,12 +637,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-5, 75);
+            this.button2.Location = new System.Drawing.Point(-3, 153);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "CÁ  NHÂN";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnctrinh
             // 
@@ -656,7 +655,7 @@
             this.btnctrinh.Name = "btnctrinh";
             this.btnctrinh.Size = new System.Drawing.Size(120, 36);
             this.btnctrinh.TabIndex = 4;
-            this.btnctrinh.Text = "CẬP THẬT CHƯƠNG TRÌNH";
+            this.btnctrinh.Text = "CẬP NHẬT CHƯƠNG TRÌNH";
             this.btnctrinh.UseVisualStyleBackColor = false;
             this.btnctrinh.Click += new System.EventHandler(this.btnctrinh_Click);
             // 

@@ -78,7 +78,7 @@ namespace project
             {
                 currentFormChild.Close();
             }
-            label1.Text = "CÁ NHÂN";
+            label1.Text = "ĐÃ ĐĂNG KÝ";
         }
 
         private void button3_Click(object sender, EventArgs e)
