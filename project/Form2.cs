@@ -181,5 +181,12 @@ namespace project
             OpenChildForm(new canhcao());
             label1.Text = button5.Text;
         }
+
+        private void btnhuyall_Click(object sender, EventArgs e)
+        {
+            string a = Properties.Settings.Default.tkhoan;
+            thuvien.thucthi("Delete from dki where ten ='" + a + "'");
+            Load_dvg1();
+        }
     }
 }

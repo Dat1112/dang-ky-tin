@@ -58,6 +58,7 @@
             this.txttim = new System.Windows.Forms.TextBox();
             this.btntatca = new System.Windows.Forms.Button();
             this.btntimkiem = new System.Windows.Forms.Button();
+            this.btnhuyall = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -120,7 +121,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 27);
             this.button4.TabIndex = 9;
-            this.button4.Text = "CÁ NHÂN";
+            this.button4.Text = "XXXX";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -134,7 +135,7 @@
             this.btntkb.Name = "btntkb";
             this.btntkb.Size = new System.Drawing.Size(120, 23);
             this.btntkb.TabIndex = 10;
-            this.btntkb.Text = "THỜI KHÓA BIỂU";
+            this.btntkb.Text = "XXXX";
             this.btntkb.UseVisualStyleBackColor = false;
             this.btntkb.Click += new System.EventHandler(this.btntkb_Click);
             // 
@@ -349,6 +350,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.btnhuyall);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnhuy);
             this.groupBox1.Controls.Add(this.txttim);
@@ -411,6 +413,16 @@
             this.btntimkiem.UseVisualStyleBackColor = true;
             this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
+            // btnhuyall
+            // 
+            this.btnhuyall.Location = new System.Drawing.Point(62, 165);
+            this.btnhuyall.Name = "btnhuyall";
+            this.btnhuyall.Size = new System.Drawing.Size(92, 23);
+            this.btnhuyall.TabIndex = 9;
+            this.btnhuyall.Text = "Hủy tất cả";
+            this.btnhuyall.UseVisualStyleBackColor = true;
+            this.btnhuyall.Click += new System.EventHandler(this.btnhuyall_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,5 +482,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnhuyall;
     }
 }

@@ -96,6 +96,7 @@ namespace project
         private void ad_menu_Load(object sender, EventArgs e)
         {
             Load_dvg1();
+            label3.Text = Properties.Settings.Default.ten;
         }
 
         private void btntrangthai_Click(object sender, EventArgs e)

@@ -39,12 +39,23 @@ namespace project
             da.Fill(tb);
             cmd.Dispose();
             dvg1.DataSource = tb;        
-            string SQL = "Select dki.malop,dki.mon,dki.svmax From dki Where dki.ten = N'"+a+"' ";
+            string SQL = "Select dki.malop,dki.mon,dki.svmax,dki.sotin From dki Where dki.ten = N'"+a+"' ";
             SqlCommand Cmd = new SqlCommand(SQL, con);
             SqlDataAdapter Da = new SqlDataAdapter();
             Da.SelectCommand = Cmd;
             DataTable Tb = new DataTable();
-            Da.Fill(Tb);            
+            Da.Fill(Tb);
+            int tin = 0;
+            for(int i = 0; i < Tb.Rows.Count; i++)
+            {
+                tin += int.Parse(Tb.Rows[i][3].ToString());
+            }
+            if (tin < 30)
+            {
+                MessageBox.Show("Bạn đã đăng ký " + tin + "/30,hãy đăng ký tối thiểu 30 tín để không bị cấm thi");
+            }
+            
+            
             DataTable TB = new DataTable();
             TB = thuvien.bang("Select ketqua.mon,ketqua.diem from ketqua,dki where ketqua.ma='" + a + "' and dki.mon=ketqua.mon");
             for(int i=0; i < tb.Rows.Count; i++)
@@ -66,6 +77,10 @@ namespace project
                         dvg1.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
                 }
 
+            }
+            if (tin > 50)
+            {
+                dvg1.DefaultCellStyle.BackColor = Color.Gray;
             }
             Cmd.Dispose();
             dvg1.Refresh();

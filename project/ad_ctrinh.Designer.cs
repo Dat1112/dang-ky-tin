@@ -295,8 +295,6 @@
             // 
             this.cbonganh.FormattingEnabled = true;
             this.cbonganh.Items.AddRange(new object[] {
-            "Chương trình tổng",
-            "Tất cả ngành",
             "TT-Công nghệ thông tin",
             "VL-Logistic"});
             this.cbonganh.Location = new System.Drawing.Point(60, 18);
