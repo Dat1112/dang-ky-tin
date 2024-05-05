@@ -34,13 +34,13 @@
             this.btnphanhoi = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dvg1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnsua = new System.Windows.Forms.Button();
-            this.btnxoa = new System.Windows.Forms.Button();
-            this.btntim = new System.Windows.Forms.Button();
             this.ykien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btntatca = new System.Windows.Forms.Button();
+            this.btntim = new System.Windows.Forms.Button();
+            this.btnxoa = new System.Windows.Forms.Button();
+            this.btnsua = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvg1)).BeginInit();
@@ -65,6 +65,7 @@
             this.txtnoidung.Name = "txtnoidung";
             this.txtnoidung.Size = new System.Drawing.Size(472, 15);
             this.txtnoidung.TabIndex = 0;
+            this.txtnoidung.TextChanged += new System.EventHandler(this.txtnoidung_TextChanged);
             // 
             // label2
             // 
@@ -108,50 +109,6 @@
             this.dvg1.Size = new System.Drawing.Size(632, 276);
             this.dvg1.TabIndex = 3;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btntatca);
-            this.groupBox1.Controls.Add(this.btntim);
-            this.groupBox1.Controls.Add(this.btnxoa);
-            this.groupBox1.Controls.Add(this.btnphanhoi);
-            this.groupBox1.Controls.Add(this.btnsua);
-            this.groupBox1.Location = new System.Drawing.Point(670, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(118, 173);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tác vụ";
-            // 
-            // btnsua
-            // 
-            this.btnsua.Location = new System.Drawing.Point(21, 71);
-            this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(75, 23);
-            this.btnsua.TabIndex = 3;
-            this.btnsua.Text = "Sửa";
-            this.btnsua.UseVisualStyleBackColor = true;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
-            // 
-            // btnxoa
-            // 
-            this.btnxoa.Location = new System.Drawing.Point(21, 100);
-            this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(75, 23);
-            this.btnxoa.TabIndex = 4;
-            this.btnxoa.Text = "Xóa";
-            this.btnxoa.UseVisualStyleBackColor = true;
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
-            // 
-            // btntim
-            // 
-            this.btntim.Location = new System.Drawing.Point(21, 42);
-            this.btntim.Name = "btntim";
-            this.btntim.Size = new System.Drawing.Size(75, 23);
-            this.btntim.TabIndex = 5;
-            this.btntim.Text = "Tìm";
-            this.btntim.UseVisualStyleBackColor = true;
-            this.btntim.Click += new System.EventHandler(this.btntim_Click);
-            // 
             // ykien
             // 
             this.ykien.DataPropertyName = "news";
@@ -167,6 +124,20 @@
             this.time.Name = "time";
             this.time.Width = 140;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btntatca);
+            this.groupBox1.Controls.Add(this.btntim);
+            this.groupBox1.Controls.Add(this.btnxoa);
+            this.groupBox1.Controls.Add(this.btnphanhoi);
+            this.groupBox1.Controls.Add(this.btnsua);
+            this.groupBox1.Location = new System.Drawing.Point(670, 45);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(118, 173);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tác vụ";
+            // 
             // btntatca
             // 
             this.btntatca.Location = new System.Drawing.Point(21, 129);
@@ -176,6 +147,36 @@
             this.btntatca.Text = "Tất cả";
             this.btntatca.UseVisualStyleBackColor = true;
             this.btntatca.Click += new System.EventHandler(this.btntatca_Click);
+            // 
+            // btntim
+            // 
+            this.btntim.Location = new System.Drawing.Point(21, 42);
+            this.btntim.Name = "btntim";
+            this.btntim.Size = new System.Drawing.Size(75, 23);
+            this.btntim.TabIndex = 5;
+            this.btntim.Text = "Tìm";
+            this.btntim.UseVisualStyleBackColor = true;
+            this.btntim.Click += new System.EventHandler(this.btntim_Click);
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.Location = new System.Drawing.Point(21, 100);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(75, 23);
+            this.btnxoa.TabIndex = 4;
+            this.btnxoa.Text = "Xóa";
+            this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+            // 
+            // btnsua
+            // 
+            this.btnsua.Location = new System.Drawing.Point(21, 71);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(75, 23);
+            this.btnsua.TabIndex = 3;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // ad_thongbao
             // 

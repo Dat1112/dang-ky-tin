@@ -65,5 +65,13 @@ namespace project
             thuvien.thucthi("update gopy set svgopy = N'" + c + "',time = '"+d+"' where masv = '" + b + "' and svgopy = N'" + a + "'");
             Load_dvg1();
         }
+
+        private void txtykien_TextChanged(object sender, EventArgs e)
+        {
+            if (txtykien.Text.Length > 5)
+            {
+                MessageBox.Show("ngu");
+            }
+        }
     }
 }

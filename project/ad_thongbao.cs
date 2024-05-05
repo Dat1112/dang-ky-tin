@@ -67,5 +67,13 @@ namespace project
         {
             Load_dvg1();
         }
+
+        private void txtnoidung_TextChanged(object sender, EventArgs e)
+        {
+            if (txtnoidung.Text.Length > 5)
+            {
+                MessageBox.Show("NGU");
+            }
+        }
     }
 }

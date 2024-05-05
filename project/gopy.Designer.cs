@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btngui = new System.Windows.Forms.Button();
             this.dvg1 = new System.Windows.Forms.DataGridView();
+            this.ykien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phanhoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ykien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phanhoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvg1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -50,6 +50,7 @@
             this.txtykien.Name = "txtykien";
             this.txtykien.Size = new System.Drawing.Size(494, 22);
             this.txtykien.TabIndex = 0;
+            this.txtykien.TextChanged += new System.EventHandler(this.txtykien_TextChanged);
             // 
             // label1
             // 
@@ -83,6 +84,28 @@
             this.dvg1.Size = new System.Drawing.Size(643, 121);
             this.dvg1.TabIndex = 3;
             this.dvg1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvg1_CellContentClick);
+            // 
+            // ykien
+            // 
+            this.ykien.DataPropertyName = "svgopy";
+            this.ykien.HeaderText = "Ý Kiến";
+            this.ykien.Name = "ykien";
+            this.ykien.ReadOnly = true;
+            this.ykien.Width = 225;
+            // 
+            // time
+            // 
+            this.time.DataPropertyName = "time";
+            this.time.HeaderText = "Thời gian";
+            this.time.Name = "time";
+            this.time.Width = 150;
+            // 
+            // phanhoi
+            // 
+            this.phanhoi.DataPropertyName = "phanhoi";
+            this.phanhoi.HeaderText = "Phản hồi";
+            this.phanhoi.Name = "phanhoi";
+            this.phanhoi.Width = 225;
             // 
             // btnxoa
             // 
@@ -128,28 +151,6 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nội dung đã gửi";
-            // 
-            // ykien
-            // 
-            this.ykien.DataPropertyName = "svgopy";
-            this.ykien.HeaderText = "Ý Kiến";
-            this.ykien.Name = "ykien";
-            this.ykien.ReadOnly = true;
-            this.ykien.Width = 225;
-            // 
-            // time
-            // 
-            this.time.DataPropertyName = "time";
-            this.time.HeaderText = "Thời gian";
-            this.time.Name = "time";
-            this.time.Width = 150;
-            // 
-            // phanhoi
-            // 
-            this.phanhoi.DataPropertyName = "phanhoi";
-            this.phanhoi.HeaderText = "Phản hồi";
-            this.phanhoi.Name = "phanhoi";
-            this.phanhoi.Width = 225;
             // 
             // gopy
             // 
